@@ -19,7 +19,7 @@ def function_1(request):
         deposit_percent = float(data['deposit_percent'])
         ages = float(data['ages'])
         inflation_rate = 4.5
-        amount_at_end = (amount_at_start * (1 + deposit_percent / 100) ^ ages) / (1 + inflation_rate / 100) ^ ages
+        amount_at_end = (amount_at_start * (1 + deposit_percent / 100) ** ages) / (1 + inflation_rate / 100) ** ages
         result = {
             'amount_at_end': amount_at_end,
         }
