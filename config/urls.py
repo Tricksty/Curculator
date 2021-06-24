@@ -21,4 +21,5 @@ import app.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', app.views.index),
+    path('credit', app.views.function_1),
 ]

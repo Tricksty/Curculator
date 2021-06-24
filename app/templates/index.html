@@ -3,14 +3,24 @@
 <head>
     {% load static %}
 
-    <meta charset="UTF-8">
-    <title>Куркулятор</title>
+    {% include "head.html" %}
 
-    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    <script defer src="{% static 'js/app/index.js' %}"></script>
+    <title>Куркулятор</title>
 </head>
     <body>
         <h1>Не издевайся надо мной, УРА-сан!</h1>
         <h2>Ijiranaide, URA-san!</h2>
         <img src="../../static/img/nagatoro.png" alt="">
+        <div class="forms">
+            <form>
+                <input type="text" id="amount_at_start" placeholder="Начальная сумма"/>
+                <input type="text" id="deposit_percent" placeholder="Процент"/>
+                <input type="number" id="ages" placeholder="Количество лет"/>
+                <input type="text" value="4.5" id="inflation_rate" placeholder="Инфляция"/>
+                <input id="submit" type="submit" value="Рассчитать"/>
+            </form>
+                <p class="amount_at_end" id="amount_at_end">DxD</p>
+        </div>
     </body>
 </html>

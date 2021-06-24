@@ -1,0 +1,9 @@
+{% load static %}
+
+<script>
+    let csrf_token = `{{ csrf_token }}`;
+</script>
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{% static 'css/global.css' %}">
+<script src="{% static 'js/global.js' %}"></script>
