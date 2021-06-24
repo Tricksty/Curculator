@@ -6,6 +6,7 @@
     {% include "head.html" %}
 
     <script defer src="{% static 'js/app/index.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/app/style.css' %}">
     <title>Куркулятор</title>
 </head>
     <body>
@@ -13,14 +14,21 @@
         <h2>Ijiranaide, URA-san!</h2>
         <img src="../../static/img/nagatoro.png" alt="">
         <div class="forms">
+            <div class="names">
+                <p class="name">Начальная сумма</p>
+                <p class="name">Процент</p>
+                <p class="name">Количество</p>
+                <p class="name">Инфляция</p>
+                <p class="name">Конечная сумма</p>
+            </div>
             <form>
                 <input type="text" id="amount_at_start" placeholder="Начальная сумма"/>
                 <input type="text" id="deposit_percent" placeholder="Процент"/>
-                <input type="number" id="ages" placeholder="Количество лет"/>
-                <input type="text" value="4.5" id="inflation_rate" placeholder="Инфляция"/>
+                <input type="text" id="ages" placeholder="Количество лет"/>
+                <input type="text" value="4" id="inflation_rate" placeholder="Инфляция"/>
+                <input type="text" id="amount_at_end" placeholder="Конечная сумма">
                 <input id="submit" type="submit" value="Рассчитать"/>
             </form>
-                <p class="amount_at_end" id="amount_at_end">DxD</p>
         </div>
     </body>
 </html>
