@@ -48,8 +48,8 @@ def function_1(request):
             deposit_percent = float(data['deposit_percent'])
             inflation_rate = float(data['inflation_rate'])
             amount_at_end = float(data['amount_at_end'])
-            base = amount_at_start * (1 + deposit_percent / 100) / (1 + inflation_rate / 100)
-            ages = log(amount_at_end, base)
+            base = (1 + deposit_percent / 100) / (1 + inflation_rate / 100)
+            ages = log(amount_at_end / amount_at_start, base)
         elif not ir_bool:
             amount_at_start = float(data['amount_at_start'])
             deposit_percent = float(data['deposit_percent'])
