@@ -1,50 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- {% load static %} {% include "head.html" %} -->
+    {% load static %}
+
+    {% include "head.html" %}
 
     <script defer src="{% static 'js/app/index.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'css/app/style.css' %} ">
+    <link rel="stylesheet" href="{% static 'css/app/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/app/style.css' %}">
     <title>Куркулятор</title>
 </head>
-
-<body>
-    <div style="text-align:center;">
+    <body>
         <h1>Не издевайся надо мной, УРА-сан!</h1>
         <h2>Ijiranaide, URA-san!</h2>
         <img src="../../static/img/nagatoro.png" alt="">
-    </div>
-    <div class="forms" style="text-align:center;">
-        <form style="width: 20%; display: inline-block; text-align: left;">
-            <label>
-                Начальная сумма:
-                <input type="text" id="amount_at_start" placeholder="Начальная сумма" style="margin: 3px;" />
-            </label>
-            <br>
-            <label>
-                Процент:
-                <input type="text" id="deposit_percent" placeholder="Процент" style="margin: 3px;" />
-            </label>
-            <br>
-            <label>
-                Количество лет:
-                <input type="text" id="ages" placeholder="Количество лет" style="margin: 3px;" />
-            </label>
-            <br>
-            <label>
-                Инфляция:
-                <input type="text" value="4" id="inflation_rate" placeholder="Инфляция" style="margin: 3px;" />
-            </label>
-            <br>
-            <label>
-                Конечная сумма:
-                <input type="text" id="amount_at_end" placeholder="Конечная сумма" style="margin: 3px;" />
-            </label>
-        </form>
-        <br>
-        <input id="submit" type="submit" value="Рассчитать" style="margin: 3px;" />
-    </div>
-</body>
-
+        <div class="forms">
+            <div class="names">
+                <p class="name">Начальная сумма</p>
+                <p class="name">Процент</p>
+                <p class="name">Количество</p>
+                <p class="name">Инфляция</p>
+                <p class="name">Конечная сумма</p>
+            </div>
+            <form>
+                <input type="text" id="amount_at_start" placeholder="Начальная сумма"/>
+                <input type="text" id="deposit_percent" placeholder="Процент"/>
+                <input type="text" id="ages" placeholder="Количество лет"/>
+                <input type="text" value="4" id="inflation_rate" placeholder="Инфляция"/>
+                <input type="text" id="amount_at_end" placeholder="Конечная сумма">
+                <input id="submit" type="submit" value="Рассчитать"/>
+            </form>
+        </div>
+    </body>
 </html>
